@@ -1,10 +1,10 @@
-# base4
-base4.py is a command line program that retrieves information about contracts from the Base 4 database in Portugal
+# Ajuste Directo
+ajustedirecto.py is a command line program that retrieves information about contracts from the ajuste directo database in Portugal
 
-base4.py - Contract Information Retriever
+ajustedirecto.py - Contract Information Retriever
 What is it?
 
-base4.py is a command line program that retrieves information about contracts from the Base 4 database in Portugal. It takes in input such as contract type, period, and district, and retrieves a CSV file that contains the relevant information.
+ajustedirecto.py is a command line program that retrieves information about contracts from the Base 4 database in Portugal. It takes in input such as contract type, period, and district, and retrieves a CSV file that contains the relevant information.
 
 
 How does it work?
@@ -39,5 +39,5 @@ pip3 install -r requirements.txt
 Usage
 To run the program, simply enter the following command in the terminal:
 
-python3 base4.py
+python3 ajustedirecto.py
 
