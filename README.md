@@ -23,7 +23,7 @@ The user can input the information, and the program will create a URL to access 
 
 Libraries required
 
-The following libraries are required to run the base4.py program:
+The following libraries are required to run the ajustedirecto.py program:
 
 
 requests
