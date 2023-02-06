@@ -1,5 +1,5 @@
 # Ajuste Directo
-ajustedirecto.py is a command line program that retrieves information about contracts from the ajuste directo database in Portugal
+ajustedirecto.py is a command line program that retrieves information about contracts from the ajuste directo database in Portugal: https://www.base.gov.pt/Base4/pt/
 
 ajustedirecto.py - Contract Information Retriever
 What is it?
