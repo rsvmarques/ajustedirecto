@@ -1,6 +1,6 @@
 # Ajuste Directo
 
-`ajustedirecto.py` is a command line program that retrieves information about contracts from the Base 4 database in Portugal: https://www.base.gov.pt/Base4/pt/
+`ajustedirecto.py` is a command line osint program that retrieves information about contracts from the Base 4 database in Portugal: https://www.base.gov.pt/Base4/pt/
 
 ## ajustedirecto.py - Contract Information Retriever
 
