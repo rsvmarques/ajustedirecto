@@ -1,4 +1,5 @@
 import os
+import time
 import wget
 
 def create_report(desdedatacontrato, atedatacontrato, tipo, distrito):
