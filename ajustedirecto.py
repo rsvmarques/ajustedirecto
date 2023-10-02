@@ -1,6 +1,8 @@
 import os
 import time
 import wget
+import csv
+import re
 
 def create_report(desdedatacontrato, atedatacontrato, tipo, distrito):
     # Create the URL
@@ -60,16 +62,44 @@ def list_reports():
             print(f"Report {reports[report_index]} removed.")
         except (IndexError, ValueError):
             print("Invalid choice.")
+def display_analytics():
+    report_files = os.listdir("reports")
+    if len(report_files) == 0:
+        print("No reports found.")
+        return
+    contracts = []
+    for file in report_files:
+        with open(f"reports/{file}", "r", encoding="utf-8" as f:
+            reader = csv.DictReader(f, delimiter=';')
+            column_names = reader.fieldnames
+            #print("Column names in the CSV file:")
+            #print(column_names)
+            for now in reader:
+                contracts.append(row)
 
+    valid_contracts = [contract for contract in contracts if 'CPV Valor' in contract]
+    if len(valid_contracts) == 0:
+        print("No contracts with 'CPV Valor' found.")
+        return
+    sorted_contracts = sorted(valid_contracts, key=lambda x: float(re.sub(r'\D', '', x['CPV Valor'])), reverse=True)
+    top_10_contracts = sorted_contracts[:10]
+    print("Top 10 Contracts by CPV Valor:")
+    for contracts in top_10_contracts:
+        contract_description = contract['CPV']
+        cpv_valor = contract['CPV Valor']
+        print(f"Contract Description: {contract_description}, CPV VAlor: {cpv_valor}")    
 # Main loop
 clear_screen()  # call this function to clear the screen
 if not os.path.exists("reports"):
     os.makedirs("reports")
-
+print("A J U S T E D I R E C T O")
+print(" /\\ /\\ /\\ /\\ /\\ /\\ /\\ /\\ /\\ /\\ /\\ ")
+print("( A )( J )( U )( S )( T )( E )( D )( I )( R )( E )( C )( T )( O )\n")
 while True:
     print("1. Create Report")
     print("2. Reports")
-    print("3. Exit")
+    print("3. Analytics")
+    print("4. Exit")
     choice = input("Enter your choice: ")
 
     if choice == "1":
@@ -89,6 +119,8 @@ while True:
         list_reports()
         clear_screen()  # call this function to clear the screen
     elif choice == "3":
+        display_analytics()
+    elif choice == "4":
         print("Goodbye!")
         break
     else:
