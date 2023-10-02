@@ -14,7 +14,7 @@ The program begins by showing a menu with the following options:
 
 - **Create Report** - to input the start and end dates, type and district, and retrieve the report
 - **Reports** - to list the existing reports in the local directory, with the option to remove one if desired
-- **Analytics** - option that gives you an ordered list of saved contracts with the top 10 contracts with the highest value
+- **Analytics** - Option to display a ranked list of stored contracts, showcasing the top 10 contracts with the highest monetary value.
 - **Exit** - to quit the program
 
 The user can input the information, and the program will create a URL to access the report, using the `wget` command to download the file and save it to a local directory. The file name will be in the format `num_start_date`, where `num` is an incremental id.
